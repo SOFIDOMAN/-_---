@@ -1,0 +1,334 @@
+:root {
+  --bg-cream: #FFF9F3;
+  --bg-beige: #F5EFE6;
+  --mint-light: #DCEFE2;
+  --mint: #A8CBB7;
+  --text: #333;
+  --accent: #a5d6c2;
+  --radius: 18px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg-cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #2f2f2f;
+}
+
+section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 32px;
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+/* === HERO === */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("images/backgrounphoto.jpg") center/cover no-repeat;
+  color: var(--text);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  width: 90%;
+  padding: 40px 24px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+}
+
+/* === МИНИ-КУРС === */
+.course-type {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #ffebee;
+  color: #b71c1c;
+  padding: 6px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* === ЗАГОЛОВКИ === */
+.course-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: red;
+}
+
+.course-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+/* === КНОПКИ === */
+.btn {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--mint);
+  color: white;
+  box-shadow: 0 4px 12px rgba(168, 203, 183, 0.3);
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background: var(--mint-light);
+  box-shadow: 0 2px 6px rgba(168, 203, 183, 0.3);
+}
+
+/* === ЦЕНА === */
+.price {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.price .current {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #e53935;
+}
+
+.price small {
+  display: block;
+  color: #777;
+}
+
+/* === ДЛЯ КОГО === */
+.for-whom ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.for-whom li {
+  margin-bottom: 10px;
+}
+
+.for-whom li::before {
+  content: "💭 ";
+}
+
+/* === АВТОР === */
+.author-section {
+  background: #fffdf9;
+  padding: 60px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.author-photo {
+  position: relative;
+  width: 260px;
+  height: 390px;
+  border-radius: 22px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 4px solid var(--mint);
+  box-shadow: 0 0 35px rgba(165, 214, 194, 0.5), 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.author-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.author-photo:hover img,
+.author-photo:active img {
+  transform: scale(1.08);
+  filter: brightness(1.05) saturate(1.1);
+}
+
+.author-photo:hover {
+  box-shadow: 0 8px 25px rgba(168, 203, 183, 0.5);
+  border-color: var(--accent);
+}
+
+.author-text {
+  flex: 1;
+  min-width: 260px;
+  line-height: 1.7;
+}
+
+.author-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.author-text p {
+  margin-bottom: 12px;
+}
+
+/* === БЛОКИ КУРСА === */
+.course-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.block {
+  background: var(--mint-light);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.block h3 {
+  margin-bottom: 8px;
+}
+
+/* === ОТЗЫВЫ === */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.review {
+  background: var(--bg-beige);
+  padding: 20px;
+  border-radius: var(--radius);
+  font-style: italic;
+  box-shadow: var(--shadow);
+}
+
+/* === CTA === */
+.cta-section {
+  background: var(--mint-light);
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.cta-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-container p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* === FAQ === */
+.faq {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 32px;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.faq details {
+  background: var(--bg-beige);
+  padding: 18px 24px;
+  border-radius: var(--radius);
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq details:hover {
+  background: var(--mint-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.faq summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faq p {
+  margin-top: 10px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* === АДАПТАЦИЯ === */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    background: url("images/backgrounphoto.jpg") center top / cover no-repeat;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .hero-content {
+    max-width: 85%;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .course-title { font-size: 1.9rem; }
+  .course-subtitle { font-size: 1.1rem; }
+  .subtitle { font-size: 1rem; }
+}
